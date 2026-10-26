@@ -34,7 +34,7 @@
       <a href="#formats">Formats</a>
       <a href="#privacy">Privacy</a>
       <a href="#faq">Questions</a>
-      <a class="nav-cta" href="#availability">Availability</a>
+      <a class="nav-cta" href="#availability">Download</a>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" title="Switch between light and dark">
         <span class="theme-icon" aria-hidden="true">
           <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M21.4 12h-2.2M4.8 12H2.6M18.6 5.4l-1.6 1.6M7 17l-1.6 1.6M18.6 18.6 17 17M7 7 5.4 5.4"/></svg>
@@ -51,8 +51,8 @@
         <p class="label">Offline file converter · Windows and Android</p>
         <h1 id="hero-title">Convert files without sending them anywhere.</h1>
         <p class="lead">Convert documents, images and audio on your own PC or phone. Your files never leave your device.</p>
-        <div class="cta"><a class="btn" href="#availability">Availability</a></div>
-        <p class="hero-note">In development. No public downloads yet. No account or upload-based conversion.</p>
+        <div class="cta"><a class="btn" href="#availability">Download</a></div>
+        <p class="hero-note">Free download for Windows and Android. No account or file uploads.</p>
       </div>
 
       <figure>
@@ -160,9 +160,29 @@
     </section>
 
     <section class="section" id="availability" aria-labelledby="availability-title">
-      <p class="label">Availability</p>
-      <h2 class="h2" id="availability-title">FlipIt is in development</h2>
-      <p class="intro intro-wide">We are preparing the Windows and phone apps. Public downloads will be posted here when they are ready.</p>
+      <p class="label">Get the app</p>
+      <h2 class="h2" id="availability-title">Download FlipIt</h2>
+      <p class="intro intro-wide">Choose your device. Both apps work offline, with no account or file uploads.</p>
+      <div class="platforms">
+        <article class="platform" aria-labelledby="android-download-title">
+          <p class="label">For your phone</p>
+          <h3 class="platform-name" id="android-download-title">FlipIt for Android</h3>
+          <p class="platform-intro">Convert a file or scan a page with the camera. Everything is processed on your phone.</p>
+          <a class="btn" href="https://github.com/rogueminddev-eng/flipit-website/releases/download/v1.1.0/FlipIt.apk" download>Download Android APK</a>
+          <p class="btn-meta">v1.1.0 · 27.2 MB · Android 8.0 or later</p>
+          <details><summary>Checksum and licence</summary><p>SHA-256</p><code class="hash" id="apk-hash">0748e812a04eeec13b3b2bbf558eb50b500d4341450dd8b1fec637e11dbaca3d</code><button class="copy" id="copy-apk-hash" type="button">Copy checksum</button><p><a href="THIRD_PARTY_NOTICES_ANDROID.txt">Android library notices</a></p></details>
+        </article>
+        <article class="platform" aria-labelledby="windows-download-title">
+          <p class="label">For your PC</p>
+          <h3 class="platform-name" id="windows-download-title">FlipIt for Windows</h3>
+          <p class="platform-intro">Convert documents, images and audio, including batches of the same file type.</p>
+          <a class="btn" href="https://github.com/rogueminddev-eng/flipit-website/releases/download/v1.1.0/FlipItSetup.exe" download>Download Windows installer</a>
+          <p class="btn-meta">v1.1.0 · 153.4 MB · Windows 10/11, 64-bit</p>
+          <p class="btn-meta">Unsigned installer. Windows may show a SmartScreen warning.</p>
+          <details><summary>Checksum and licence</summary><p>SHA-256</p><code class="hash" id="hash">5fc880e723b2a8e6d755acef9d8b0436ee089ae22c7b5ad0340b1a5b88bd6903</code><button class="copy" id="copy-hash" type="button">Copy checksum</button><p><a href="THIRD_PARTY_NOTICES_WINDOWS.txt">Windows library notices</a></p></details>
+        </article>
+      </div>
+      <p class="caption">Released 27 October 2026. <a href="changelog.html">Release notes</a> · <a href="SHA256SUMS.txt">All checksums</a> · <a href="LICENSE.txt">Licence</a> · <a href="https://github.com/rogueminddev-eng/flipit-website/releases/download/v1.1.0/third-party-materials-v1.1.0.zip">Open-source library materials</a></p>
       <aside class="stats-card" id="site-stats" data-stats-api="https://flipit-site-stats.rouguemind-dev.workers.dev" aria-label="FlipIt website statistics">
         <p class="stats-title">FlipIt, by the numbers</p>
         <div class="stats-values">
@@ -181,7 +201,7 @@
       <a href="privacy.html">Privacy</a>
       <a href="changelog.html">Release notes</a>
     </nav>
-    <span>Windows and phone apps in development · Offline by design.</span>
+    <span>Windows and Android · Offline by design.</span>
   </footer>
 </div>
 </body>

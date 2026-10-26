@@ -1,0 +1,82 @@
+FlipIt for Android includes the third-party software listed below. Each
+component stays under its own licence, and the full licence text for each is
+available at the link beside it.
+
+Nothing here is downloaded while you use FlipIt. Everything listed is inside
+the app when you install it.
+
+
+== The MP3 encoder, and what its licence asks of us
+
+LAME 3.100
+  Licence: LGPL-2.1-or-later
+  https://lame.sourceforge.io/
+
+LAME is built from its own sources, unmodified, and ships as its own shared
+library - libmp3lame.so - with FlipIt's code in a separate one, libflipitlame.so,
+that links to it when the app runs.
+
+That arrangement is deliberate. LGPL-2.1 asks that you be able to replace LAME
+with a different build of it without rebuilding the app around it, and keeping
+the two apart is what makes that possible. The sources LAME was built from,
+the library build files, and this notice are available with the public downloads:
+https://github.com/rogueminddev-eng/flipit-website/releases
+See the LAME source companion in the third-party materials asset. It contains
+only the library sources and library build configuration.
+
+
+== Reading scanned pages
+
+Tesseract OCR 5.x, via Tesseract4Android 4.8.0
+  Licence: Apache-2.0
+  https://github.com/tesseract-ocr/tesseract
+  https://github.com/adaptech-cz/Tesseract4Android
+
+Leptonica
+  Licence: BSD-2-Clause
+  https://github.com/DanBloomberg/leptonica
+
+libjpeg-turbo
+  Licence: IJG / BSD-3-Clause / zlib
+  https://libjpeg-turbo.org/
+
+libpng
+  Licence: PNG Reference Library License v2
+  http://www.libpng.org/pub/png/libpng.html
+
+English language model (eng.traineddata, "fast")
+  Licence: Apache-2.0
+  https://github.com/tesseract-ocr/tessdata_fast
+
+This is the same model the Windows version of FlipIt uses, so a scanned page
+reads the same way on a phone as it does on a PC.
+
+
+== Reading and writing PDFs
+
+PDFBox-Android 2.0.27.0
+  Licence: Apache-2.0
+  https://github.com/TomRoush/PdfBox-Android
+
+Apache PDFBox
+  Licence: Apache-2.0
+  https://pdfbox.apache.org/
+
+Bouncy Castle (used by PDFBox for encryption)
+  Licence: MIT
+  https://www.bouncycastle.org/
+
+
+== The app itself
+
+Kotlin standard library and coroutines
+  Licence: Apache-2.0
+  https://github.com/JetBrains/kotlin
+
+AndroidX, including Jetpack Compose and Material 3
+  Licence: Apache-2.0
+  https://developer.android.com/jetpack/androidx
+
+Roboto (the system typeface Android draws text with)
+  Licence: Apache-2.0
+  https://github.com/googlefonts/roboto

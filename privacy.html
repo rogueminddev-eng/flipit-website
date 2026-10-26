@@ -23,7 +23,7 @@
     <nav class="nav" aria-label="Site">
       <a href="index.html#formats">Formats</a>
       <a href="index.html#faq">Questions</a>
-      <a class="nav-cta" href="index.html#availability">Availability</a>
+      <a class="nav-cta" href="index.html#availability">Download</a>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" title="Switch between light and dark">
         <span class="theme-icon" aria-hidden="true">
           <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M21.4 12h-2.2M4.8 12H2.6M18.6 5.4l-1.6 1.6M7 17l-1.6 1.6M18.6 18.6 17 17M7 7 5.4 5.4"/></svg>
@@ -68,7 +68,7 @@
     <ul>
       <li>The homepage asks a small Cloudflare Worker to count an open browser tab session. The database stores only one aggregate visit total; it receives no documents, file names, passwords or conversion activity. These are approximate visits, not unique people: blocked requests, multiple tabs and automated traffic can affect the total.</li>
       <li>The website stores your theme choice in local storage and a counted-this-tab flag in session storage. It sets no analytics cookies and creates no advertising identifier.</li>
-      <li>Android and Windows download totals come from the download counts on public GitHub Releases. No app downloads are available until a release is published.</li>
+      <li>Android and Windows download totals come from public GitHub release asset counts. They count downloaded files, not installations or unique people. Required notices and materials for the bundled open-source libraries are public alongside the installers.</li>
       <li>Fonts and images are served from this site. GitHub and Cloudflare process network request information, such as IP addresses, to host and protect their services. The counter uses Cloudflare's short-lived rate limiting to reduce abuse; it does not put IP addresses in its database or enable custom request logs.</li>
       <li>The website and its displayed totals are public. The converter source, signing keys, Cloudflare credentials and private Worker project are not published in the website repository.</li>
     </ul>
@@ -83,7 +83,7 @@
       <a href="privacy.html" aria-current="page">Privacy</a>
       <a href="changelog.html">Release notes</a>
     </nav>
-    <span>Windows and phone apps in development · Offline by design.</span>
+    <span>Windows and Android · Offline by design.</span>
   </footer>
 </div>
 </body>

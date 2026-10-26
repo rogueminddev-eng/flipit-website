@@ -191,6 +191,10 @@ p,figure{margin:0}
 .platform-name svg{flex:none;color:var(--ink-3)}
 .platform-intro{margin-top:12px;font-size:15.5px;line-height:1.55;color:var(--ink-2)}
 .platform .btn{margin-top:22px;align-self:flex-start;padding:15px 22px;font-size:16px}
+.platform .btn-meta{margin-top:12px}
+.platform details{margin-top:20px;padding-top:14px;border-top:1px solid var(--rule)}
+.platform details summary{cursor:pointer;font-size:14px;color:var(--ink-2)}
+.platform details p{margin-top:12px;font-size:14px}
 .platform .facts{margin-top:26px}
 .intro-wide{max-width:44rem}
 .needs{margin-top:28px;padding-top:18px;border-top:1px solid var(--rule);font-size:15px;line-height:1.55;color:var(--ink-2)}
