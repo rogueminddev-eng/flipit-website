@@ -1,0 +1,2 @@
+# Preserve the exact release-file bytes used by the published SHA-256 checksums.
+*.txt -text

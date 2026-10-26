@@ -1,6 +1,7 @@
 # Only approved public website files may be added here.
 *
 !.gitignore
+!.gitattributes
 !.nojekyll
 !index.html
 !privacy.html
