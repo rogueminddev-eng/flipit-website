@@ -155,7 +155,7 @@ p,figure{margin:0}
 @media (max-width:520px){.formats{grid-template-columns:minmax(0,1fr)}}
 .group{display:flex;flex-direction:column;gap:14px}
 .pairs{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
-.pair{display:grid;grid-template-columns:6ch 2.5ch auto;align-items:baseline;padding-block:11px;border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:15.5px;color:var(--ink)}
+.pair{display:grid;grid-template-columns:7ch 2.5ch auto;align-items:baseline;padding-block:11px;border-bottom:1px solid var(--rule);font-family:var(--mono);font-size:15.5px;color:var(--ink)}
 .pair .to{color:var(--accent)}
 .group-note{font-size:14.5px;line-height:1.5;color:var(--ink-3)}
 

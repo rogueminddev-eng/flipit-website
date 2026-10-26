@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FlipIt — convert files offline</title>
-<meta name="description" content="FlipIt converts documents, images and audio on your own Windows PC, removes hidden metadata, and never uploads your files.">
+<meta name="description" content="FlipIt converts documents, images and audio on your own Windows PC or Android phone, offline. Your files are never uploaded.">
 <link rel="icon" href="favicon.ico">
 <link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="styles.css">
@@ -52,7 +52,7 @@
       <div>
         <p class="label">Offline file converter · Windows and Android</p>
         <h1 id="hero-title">Convert files without sending them anywhere.</h1>
-        <p class="lead">FlipIt turns PDFs into spreadsheets, Word documents into PDFs, and photos and audio into the formats you need — on your own PC, or on your own phone. Hidden metadata comes off on the way out, and nothing is uploaded, because there's nowhere to upload it to.</p>
+        <p class="lead">Convert documents, images and audio on your own PC or phone. Your files never leave your device.</p>
         <div class="cta"><a class="btn" href="#availability">Availability</a></div>
         <p class="hero-note">In development. No public downloads yet. No account or upload-based conversion.</p>
       </div>
@@ -80,68 +80,18 @@
       </figure>
     </section>
 
-    <section class="section" id="app" aria-labelledby="app-title">
-      <div class="app">
-        <div>
-          <p class="label">The app</p>
-          <h2 class="h2" id="app-title">One window. Drop, choose, convert.</h2>
-          <dl class="moves">
-            <div><dt>Drop</dt><dd>Drag files onto FlipIt or click Browse. Mix in files of another type and FlipIt says how many it skipped.</dd></div>
-            <div><dt>Choose</dt><dd>Pick from the formats that file can actually become, or protect a PDF, Word or Excel file with a password as it is, and choose the folder to save it in.</dd></div>
-            <div><dt>Convert</dt><dd>Long PDFs count up page by page with a time estimate. Stop whenever you like.</dd></div>
-          </dl>
-        </div>
-        <figure class="shot">
-          <picture>
-            <source srcset="app-dark.png" media="(prefers-color-scheme: dark)">
-            <img src="app-light.png" alt="The FlipIt window with a PDF loaded and marked Not protected, Convert chosen over Protect, set to convert to Excel with hidden-metadata removal switched on">
-          </picture>
-          <span class="screen-safe-label screen-safe-file" aria-hidden="true">Sample file.pdf</span>
-          <span class="screen-safe-label screen-safe-folder" aria-hidden="true">Chosen folder</span>
-        </figure>
-      </div>
-    </section>
-
     <section class="section" id="privacy" aria-labelledby="privacy-title">
       <div class="split">
         <div>
-          <p class="label">What leaves your PC</p>
-          <h2 class="h2" id="privacy-title">Nothing. Here's the whole list.</h2>
-          <p class="intro">An online converter needs your file on its server before it can do anything. FlipIt's converter runs on your machine, so these counts aren't a promise in a policy — they're how the software is built.</p>
+          <p class="label">What leaves your device</p>
+          <h2 class="h2" id="privacy-title">Nothing leaves your device.</h2>
+          <p class="intro">FlipIt does the converting on your own device, so there is nothing to upload.</p>
         </div>
         <dl class="ledger">
-          <div class="ledger-row"><dt>Files uploaded<span>Conversion happens in a temporary folder on your own drive.</span></dt><dd>0</dd></div>
-          <div class="ledger-row"><dt>Accounts or sign-ins<span>Install it and start converting.</span></dt><dd>0</dd></div>
-          <div class="ledger-row"><dt>Analytics or tracking calls<span>FlipIt never reports what you convert, or that you converted anything.</span></dt><dd>0</dd></div>
-          <div class="ledger-row"><dt>Networking code in FlipIt<span>Automated tests scan the app and the converter and fail if any appears.</span></dt><dd>0</dd></div>
+          <div class="ledger-row"><dt>Files uploaded</dt><dd>0</dd></div>
+          <div class="ledger-row"><dt>Accounts or sign-ins</dt><dd>0</dd></div>
+          <div class="ledger-row"><dt>Tracking inside the app</dt><dd>0</dd></div>
         </dl>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="way-out-title">
-      <div class="section-head">
-        <p class="label">On the way out</p>
-        <h2 class="h2" id="way-out-title">What happens to a file after it's converted</h2>
-      </div>
-      <div class="features">
-        <article class="feature">
-          <p class="label">Metadata</p>
-          <h3>Hidden details come off</h3>
-          <p>Photos lose their camera and GPS tags. Word and Excel files lose their author, title and last-modified-by. PDFs lose their document info. It's on by default — switch it off for any conversion where you want to keep them.</p>
-          <p class="spec">EXIF · dc:creator · cp:lastModifiedBy · /Info</p>
-        </article>
-        <article class="feature">
-          <p class="label">Encryption</p>
-          <h3>Lock it with a password</h3>
-          <p>Drop a PDF, Word or Excel file and FlipIt shows whether it's protected. Protect saves a password-protected copy in the same format and leaves your original untouched; Unlock saves an unprotected copy. You can also lock a file as you convert it. Acrobat, Edge, Word and Excel ask for the password before showing anything.</p>
-          <p class="spec">AES-256 · .pdf · .docx · .xlsx · originals untouched</p>
-        </article>
-        <article class="feature">
-          <p class="label">Control</p>
-          <h3>Stop whenever you like</h3>
-          <p>Press Stop mid-conversion and FlipIt finishes the step it's on, then stops. Files already converted are kept, and an unfinished file never lands next to your originals.</p>
-          <p class="spec">Partial output is never saved</p>
-        </article>
       </div>
     </section>
 
@@ -149,84 +99,63 @@
       <div class="section-head">
         <p class="label">Formats</p>
         <h2 class="h2" id="formats-title">Sixteen conversions, one window</h2>
-        <p class="intro">Drag in a single file or a batch of the same type. Converted files are saved next to the originals unless you pick another folder, and PDFs report progress page by page with a time estimate.</p>
       </div>
       <div class="formats">
         <div class="group">
           <p class="label">Documents</p>
           <ul class="pairs">
-            <li class="pair"><span>.docx</span><span class="to">→</span><span>.pdf</span></li>
-            <li class="pair"><span>.pdf</span><span class="to">→</span><span>.docx</span></li>
-            <li class="pair"><span>.txt</span><span class="to">→</span><span>.pdf</span></li>
+            <li class="pair"><span>PDF</span><span class="to">→</span><span>Word</span></li>
+            <li class="pair"><span>Word</span><span class="to">→</span><span>PDF</span></li>
+            <li class="pair"><span>Text</span><span class="to">→</span><span>PDF</span></li>
           </ul>
-          <p class="group-note">PDF to Word works on PDFs with real text, not scanned pages.</p>
         </div>
         <div class="group">
           <p class="label">Tables</p>
           <ul class="pairs">
-            <li class="pair"><span>.pdf</span><span class="to">→</span><span>.xlsx</span></li>
-            <li class="pair"><span>.pdf</span><span class="to">→</span><span>.csv</span></li>
-            <li class="pair"><span>.csv</span><span class="to">→</span><span>.xlsx</span></li>
-            <li class="pair"><span>.xlsx</span><span class="to">→</span><span>.csv</span></li>
-            <li class="pair"><span>.xlsx</span><span class="to">→</span><span>.pdf</span></li>
+            <li class="pair"><span>PDF</span><span class="to">→</span><span>Excel</span></li>
+            <li class="pair"><span>PDF</span><span class="to">→</span><span>CSV</span></li>
+            <li class="pair"><span>Excel</span><span class="to">→</span><span>CSV</span></li>
+            <li class="pair"><span>Excel</span><span class="to">→</span><span>PDF</span></li>
+            <li class="pair"><span>CSV</span><span class="to">→</span><span>Excel</span></li>
           </ul>
-          <p class="group-note">A table that spans many pages lands on one sheet. Scanned tables are read with OCR and keep their columns. A workbook saved as PDF keeps every sheet, each starting a new page under its name.</p>
         </div>
         <div class="group">
           <p class="label">Images</p>
           <ul class="pairs">
-            <li class="pair"><span>.jpg</span><span class="to">→</span><span>.png</span></li>
-            <li class="pair"><span>.png</span><span class="to">→</span><span>.jpg</span></li>
-            <li class="pair"><span>.jpg</span><span class="to">→</span><span>.pdf</span></li>
-            <li class="pair"><span>.png</span><span class="to">→</span><span>.pdf</span></li>
-            <li class="pair"><span>.jpg</span><span class="to">→</span><span>.docx</span></li>
-            <li class="pair"><span>.png</span><span class="to">→</span><span>.docx</span></li>
+            <li class="pair"><span>JPG</span><span class="to">→</span><span>PNG</span></li>
+            <li class="pair"><span>PNG</span><span class="to">→</span><span>JPG</span></li>
+            <li class="pair"><span>JPG</span><span class="to">→</span><span>PDF</span></li>
+            <li class="pair"><span>PNG</span><span class="to">→</span><span>PDF</span></li>
+            <li class="pair"><span>JPG</span><span class="to">→</span><span>Word</span></li>
+            <li class="pair"><span>PNG</span><span class="to">→</span><span>Word</span></li>
           </ul>
-          <p class="group-note">Any picture can be made smaller too: large, medium or small, or just left as it is. Camera and location tags are removed from every output, and a photograph turned to Word comes out as the text read from it. The Android app can also scan a page with the camera.</p>
         </div>
         <div class="group">
           <p class="label">Audio</p>
           <ul class="pairs">
-            <li class="pair"><span>.mp3</span><span class="to">→</span><span>.wav</span></li>
-            <li class="pair"><span>.wav</span><span class="to">→</span><span>.mp3</span></li>
+            <li class="pair"><span>MP3</span><span class="to">→</span><span>WAV</span></li>
+            <li class="pair"><span>WAV</span><span class="to">→</span><span>MP3</span></li>
           </ul>
-          <p class="group-note">Uses the copy of ffmpeg that comes with FlipIt.</p>
         </div>
       </div>
     </section>
 <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="section-head">
         <p class="label">Questions</p>
-        <h2 class="h2" id="faq-title">Common questions</h2>
+        <h2 class="h2" id="faq-title">Quick answers</h2>
       </div>
       <div class="faq">
         <details>
-          <summary>Why does Windows say "Windows protected your PC"?</summary>
-          <p>Windows SmartScreen shows that warning for apps from publishers it doesn't know yet, and FlipIt doesn't have a code-signing certificate so far. Check that the installer's SHA-256 matches the one on this page, then choose More info and Run anyway.</p>
-        </details>
-        <details>
           <summary>Does FlipIt need an internet connection?</summary>
-          <p>No. Once it's installed, converting, removing metadata and locking files all happen on your PC. There's no account, no sign-in and no background update check.</p>
-        </details>
-        <details>
-          <summary>Which files can I lock with a password?</summary>
-          <p>PDF, Word (.docx) and Excel (.xlsx) files, either as they are with Protect or while converting to one of those formats. They have password protection built in, so a protected file opens with a password prompt in Acrobat, Edge, Word or Excel. Text and CSV files can be protected by converting them to PDF or Excel. Images and audio have no password feature.</p>
-        </details>
-        <details>
-          <summary>I've forgotten the password for a locked file.</summary>
-          <p>There's no way back in — FlipIt never stores or sends passwords, which is also why it asks you to type the password twice. If you still have the original file, protect it again with a new password.</p>
+          <p>No. Converting happens on your device, with no account and no sign-in.</p>
         </details>
         <details>
           <summary>What happens to my original files?</summary>
-          <p>Nothing. FlipIt only reads them and writes the converted file next to them, or into the folder you choose. If a file with the same name is already there, the new one is saved as "name (1)".</p>
+          <p>Nothing. FlipIt only reads them and saves the converted file as a new one.</p>
         </details>
         <details>
-          <summary>Can FlipIt read scanned PDFs?</summary>
-          <p>For PDF to Excel or CSV, yes: pages without real text are read with OCR in English, and each line becomes a row. Clean printed scans work best; photos of pages and handwriting don't come out well. PDF to Word needs a PDF with real text.</p>
-        </details>
-        <details>
-          <summary>How do I uninstall it?</summary>
-          <p>Open Settings, go to Apps › Installed apps, find FlipIt and choose Uninstall.</p>
+          <summary>Can FlipIt read scanned pages and photos?</summary>
+          <p>Yes, for English text. Scanned PDFs become Excel or CSV tables, and photos become PDF or Word. On Android, scanned PDFs can become Word too. Clear, well-lit pages read best, and it is worth checking anything important against the original.</p>
         </details>
       </div>
     </section>
