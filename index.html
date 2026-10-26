@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlipIt — convert files offline</title>
+<meta name="description" content="FlipIt converts documents, images and audio on your own Windows PC, removes hidden metadata, and never uploads your files.">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="styles.css">
+<!--og-->
+<link rel="canonical" href="https://rogueminddev-eng.github.io/flipit-website/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FlipIt">
+<meta property="og:title" content="FlipIt — convert files offline">
+<meta property="og:description" content="Convert files without sending them anywhere. Free, offline, no account.">
+<meta property="og:url" content="https://rogueminddev-eng.github.io/flipit-website/">
+<meta property="og:image" content="https://rogueminddev-eng.github.io/flipit-website/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="FlipIt: convert files without sending them anywhere">
+<meta name="twitter:card" content="summary_large_image">
+<!--/og-->
+<script>
+// Runs before anything is painted: a stored choice has to be on the root element already, or the
+// page paints in the other theme first and the visitor sees it flash.
+(function(){try{var t=localStorage.getItem('flipit-theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+</script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top" id="top">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true"></span>FlipIt</a>
+    <nav class="nav" aria-label="Page sections">
+      <a href="#formats">Formats</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">Questions</a>
+      <a class="nav-cta" href="#availability">Availability</a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" title="Switch between light and dark">
+        <span class="theme-icon" aria-hidden="true">
+          <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M21.4 12h-2.2M4.8 12H2.6M18.6 5.4l-1.6 1.6M7 17l-1.6 1.6M18.6 18.6 17 17M7 7 5.4 5.4"/></svg>
+          <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.2A8.6 8.6 0 1 1 9.8 3.5a6.9 6.9 0 0 0 10.7 10.7z"/></svg>
+        </span>
+        <span class="theme-label" id="theme-label">Dark</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="label">Offline file converter · Windows and Android</p>
+        <h1 id="hero-title">Convert files without sending them anywhere.</h1>
+        <p class="lead">FlipIt turns PDFs into spreadsheets, Word documents into PDFs, and photos and audio into the formats you need — on your own PC, or on your own phone. Hidden metadata comes off on the way out, and nothing is uploaded, because there's nowhere to upload it to.</p>
+        <div class="cta"><a class="btn" href="#availability">Availability</a></div>
+        <p class="hero-note">In development. No public downloads yet. No account or upload-based conversion.</p>
+      </div>
+
+      <figure>
+        <div class="props" id="props">
+          <div class="props-head">
+            <div class="file"><span class="file-type">JPG</span><span>IMG_2041.jpg</span></div>
+            <button class="reveal" id="reveal-toggle" type="button" aria-pressed="false" aria-controls="props-tags">Reveal values</button>
+          </div>
+          <dl class="tags" id="props-tags">
+            <div class="tag"><dt>Make</dt><dd><span class="val" style="--i:0">Example brand</span></dd></div>
+            <div class="tag"><dt>Model</dt><dd><span class="val" style="--i:1">Example phone</span></dd></div>
+            <div class="tag"><dt>DateTimeOriginal</dt><dd><span class="val" style="--i:2">Example date</span></dd></div>
+            <div class="tag"><dt>GPSLatitude</dt><dd><span class="val" style="--i:3">Example latitude</span></dd></div>
+            <div class="tag"><dt>GPSLongitude</dt><dd><span class="val" style="--i:4">Example longitude</span></dd></div>
+            <div class="tag"><dt>Artist</dt><dd><span class="val" style="--i:5">Example user</span></dd></div>
+          </dl>
+          <div class="props-foot">
+            <span>Saved as <strong>IMG_2041.png</strong></span>
+            <span class="clean"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>0 metadata tags</span>
+          </div>
+        </div>
+        <figcaption class="caption">EXIF tags from an example photo. FlipIt writes the pixels into a new file and leaves every one of these behind.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section" id="app" aria-labelledby="app-title">
+      <div class="app">
+        <div>
+          <p class="label">The app</p>
+          <h2 class="h2" id="app-title">One window. Drop, choose, convert.</h2>
+          <dl class="moves">
+            <div><dt>Drop</dt><dd>Drag files onto FlipIt or click Browse. Mix in files of another type and FlipIt says how many it skipped.</dd></div>
+            <div><dt>Choose</dt><dd>Pick from the formats that file can actually become, or protect a PDF, Word or Excel file with a password as it is, and choose the folder to save it in.</dd></div>
+            <div><dt>Convert</dt><dd>Long PDFs count up page by page with a time estimate. Stop whenever you like.</dd></div>
+          </dl>
+        </div>
+        <figure class="shot">
+          <picture>
+            <source srcset="app-dark.png" media="(prefers-color-scheme: dark)">
+            <img src="app-light.png" alt="The FlipIt window with a PDF loaded and marked Not protected, Convert chosen over Protect, set to convert to Excel with hidden-metadata removal switched on">
+          </picture>
+          <span class="screen-safe-label screen-safe-file" aria-hidden="true">Sample file.pdf</span>
+          <span class="screen-safe-label screen-safe-folder" aria-hidden="true">Chosen folder</span>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="privacy" aria-labelledby="privacy-title">
+      <div class="split">
+        <div>
+          <p class="label">What leaves your PC</p>
+          <h2 class="h2" id="privacy-title">Nothing. Here's the whole list.</h2>
+          <p class="intro">An online converter needs your file on its server before it can do anything. FlipIt's converter runs on your machine, so these counts aren't a promise in a policy — they're how the software is built.</p>
+        </div>
+        <dl class="ledger">
+          <div class="ledger-row"><dt>Files uploaded<span>Conversion happens in a temporary folder on your own drive.</span></dt><dd>0</dd></div>
+          <div class="ledger-row"><dt>Accounts or sign-ins<span>Install it and start converting.</span></dt><dd>0</dd></div>
+          <div class="ledger-row"><dt>Analytics or tracking calls<span>FlipIt never reports what you convert, or that you converted anything.</span></dt><dd>0</dd></div>
+          <div class="ledger-row"><dt>Networking code in FlipIt<span>Automated tests scan the app and the converter and fail if any appears.</span></dt><dd>0</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="way-out-title">
+      <div class="section-head">
+        <p class="label">On the way out</p>
+        <h2 class="h2" id="way-out-title">What happens to a file after it's converted</h2>
+      </div>
+      <div class="features">
+        <article class="feature">
+          <p class="label">Metadata</p>
+          <h3>Hidden details come off</h3>
+          <p>Photos lose their camera and GPS tags. Word and Excel files lose their author, title and last-modified-by. PDFs lose their document info. It's on by default — switch it off for any conversion where you want to keep them.</p>
+          <p class="spec">EXIF · dc:creator · cp:lastModifiedBy · /Info</p>
+        </article>
+        <article class="feature">
+          <p class="label">Encryption</p>
+          <h3>Lock it with a password</h3>
+          <p>Drop a PDF, Word or Excel file and FlipIt shows whether it's protected. Protect saves a password-protected copy in the same format and leaves your original untouched; Unlock saves an unprotected copy. You can also lock a file as you convert it. Acrobat, Edge, Word and Excel ask for the password before showing anything.</p>
+          <p class="spec">AES-256 · .pdf · .docx · .xlsx · originals untouched</p>
+        </article>
+        <article class="feature">
+          <p class="label">Control</p>
+          <h3>Stop whenever you like</h3>
+          <p>Press Stop mid-conversion and FlipIt finishes the step it's on, then stops. Files already converted are kept, and an unfinished file never lands next to your originals.</p>
+          <p class="spec">Partial output is never saved</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="formats" aria-labelledby="formats-title">
+      <div class="section-head">
+        <p class="label">Formats</p>
+        <h2 class="h2" id="formats-title">Sixteen conversions, one window</h2>
+        <p class="intro">Drag in a single file or a batch of the same type. Converted files are saved next to the originals unless you pick another folder, and PDFs report progress page by page with a time estimate.</p>
+      </div>
+      <div class="formats">
+        <div class="group">
+          <p class="label">Documents</p>
+          <ul class="pairs">
+            <li class="pair"><span>.docx</span><span class="to">→</span><span>.pdf</span></li>
+            <li class="pair"><span>.pdf</span><span class="to">→</span><span>.docx</span></li>
+            <li class="pair"><span>.txt</span><span class="to">→</span><span>.pdf</span></li>
+          </ul>
+          <p class="group-note">PDF to Word works on PDFs with real text, not scanned pages.</p>
+        </div>
+        <div class="group">
+          <p class="label">Tables</p>
+          <ul class="pairs">
+            <li class="pair"><span>.pdf</span><span class="to">→</span><span>.xlsx</span></li>
+            <li class="pair"><span>.pdf</span><span class="to">→</span><span>.csv</span></li>
+            <li class="pair"><span>.csv</span><span class="to">→</span><span>.xlsx</span></li>
+            <li class="pair"><span>.xlsx</span><span class="to">→</span><span>.csv</span></li>
+            <li class="pair"><span>.xlsx</span><span class="to">→</span><span>.pdf</span></li>
+          </ul>
+          <p class="group-note">A table that spans many pages lands on one sheet. Scanned tables are read with OCR and keep their columns. A workbook saved as PDF keeps every sheet, each starting a new page under its name.</p>
+        </div>
+        <div class="group">
+          <p class="label">Images</p>
+          <ul class="pairs">
+            <li class="pair"><span>.jpg</span><span class="to">→</span><span>.png</span></li>
+            <li class="pair"><span>.png</span><span class="to">→</span><span>.jpg</span></li>
+            <li class="pair"><span>.jpg</span><span class="to">→</span><span>.pdf</span></li>
+            <li class="pair"><span>.png</span><span class="to">→</span><span>.pdf</span></li>
+            <li class="pair"><span>.jpg</span><span class="to">→</span><span>.docx</span></li>
+            <li class="pair"><span>.png</span><span class="to">→</span><span>.docx</span></li>
+          </ul>
+          <p class="group-note">Any picture can be made smaller too: large, medium or small, or just left as it is. Camera and location tags are removed from every output, and a photograph turned to Word comes out as the text read from it. The Android app can also scan a page with the camera.</p>
+        </div>
+        <div class="group">
+          <p class="label">Audio</p>
+          <ul class="pairs">
+            <li class="pair"><span>.mp3</span><span class="to">→</span><span>.wav</span></li>
+            <li class="pair"><span>.wav</span><span class="to">→</span><span>.mp3</span></li>
+          </ul>
+          <p class="group-note">Uses the copy of ffmpeg that comes with FlipIt.</p>
+        </div>
+      </div>
+    </section>
+<section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="section-head">
+        <p class="label">Questions</p>
+        <h2 class="h2" id="faq-title">Common questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Why does Windows say "Windows protected your PC"?</summary>
+          <p>Windows SmartScreen shows that warning for apps from publishers it doesn't know yet, and FlipIt doesn't have a code-signing certificate so far. Check that the installer's SHA-256 matches the one on this page, then choose More info and Run anyway.</p>
+        </details>
+        <details>
+          <summary>Does FlipIt need an internet connection?</summary>
+          <p>No. Once it's installed, converting, removing metadata and locking files all happen on your PC. There's no account, no sign-in and no background update check.</p>
+        </details>
+        <details>
+          <summary>Which files can I lock with a password?</summary>
+          <p>PDF, Word (.docx) and Excel (.xlsx) files, either as they are with Protect or while converting to one of those formats. They have password protection built in, so a protected file opens with a password prompt in Acrobat, Edge, Word or Excel. Text and CSV files can be protected by converting them to PDF or Excel. Images and audio have no password feature.</p>
+        </details>
+        <details>
+          <summary>I've forgotten the password for a locked file.</summary>
+          <p>There's no way back in — FlipIt never stores or sends passwords, which is also why it asks you to type the password twice. If you still have the original file, protect it again with a new password.</p>
+        </details>
+        <details>
+          <summary>What happens to my original files?</summary>
+          <p>Nothing. FlipIt only reads them and writes the converted file next to them, or into the folder you choose. If a file with the same name is already there, the new one is saved as "name (1)".</p>
+        </details>
+        <details>
+          <summary>Can FlipIt read scanned PDFs?</summary>
+          <p>For PDF to Excel or CSV, yes: pages without real text are read with OCR in English, and each line becomes a row. Clean printed scans work best; photos of pages and handwriting don't come out well. PDF to Word needs a PDF with real text.</p>
+        </details>
+        <details>
+          <summary>How do I uninstall it?</summary>
+          <p>Open Settings, go to Apps › Installed apps, find FlipIt and choose Uninstall.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="availability" aria-labelledby="availability-title">
+      <p class="label">Availability</p>
+      <h2 class="h2" id="availability-title">FlipIt is in development</h2>
+      <p class="intro intro-wide">We are preparing the Windows and phone apps. Public downloads will be posted here when they are ready.</p>
+      <aside class="stats-card" id="site-stats" data-stats-api="" aria-label="FlipIt website statistics">
+        <p class="stats-title">FlipIt, by the numbers</p>
+        <div class="stats-values">
+          <div class="stat"><span class="stat-label">Website visits</span><strong id="visit-count">—</strong></div>
+          <div class="stat"><span class="stat-label">Android downloads</span><strong id="android-download-count">—</strong></div>
+          <div class="stat"><span class="stat-label">Windows downloads</span><strong id="windows-download-count">—</strong></div>
+        </div>
+        <p class="stats-note" id="stats-note">Visit counting starts when the website goes live. Download totals update when public app releases are available.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true"></span>FlipIt</a>
+    <nav class="foot-links" aria-label="More about FlipIt">
+      <a href="privacy.html">Privacy</a>
+      <a href="changelog.html">Release notes</a>
+    </nav>
+    <span>Windows and phone apps in development · Offline by design.</span>
+  </footer>
+</div>
+</body>
+</html>

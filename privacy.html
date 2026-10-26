@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlipIt privacy</title>
+<meta name="description" content="What FlipIt does with your files, passwords and data: it keeps them on your own device.">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="styles.css">
+<script>
+// Before anything is painted: a stored choice has to be on the root element already, or the page
+// paints in the other theme first and the visitor sees it flash.
+(function(){try{var t=localStorage.getItem('flipit-theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+</script>
+<script src="site.js" defer></script>
+<!--og-->
+<link rel="canonical" href="https://rogueminddev-eng.github.io/flipit-website/privacy.html">
+<!--/og-->
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>FlipIt</a>
+    <nav class="nav" aria-label="Site">
+      <a href="index.html#formats">Formats</a>
+      <a href="index.html#faq">Questions</a>
+      <a class="nav-cta" href="index.html#availability">Availability</a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" title="Switch between light and dark">
+        <span class="theme-icon" aria-hidden="true">
+          <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M21.4 12h-2.2M4.8 12H2.6M18.6 5.4l-1.6 1.6M7 17l-1.6 1.6M18.6 18.6 17 17M7 7 5.4 5.4"/></svg>
+          <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.2A8.6 8.6 0 1 1 9.8 3.5a6.9 6.9 0 0 0 10.7 10.7z"/></svg>
+        </span>
+        <span class="theme-label" id="theme-label">Dark</span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="doc">
+    <p class="label">Privacy</p>
+    <h1>Your files stay on your device</h1>
+    <p class="standfirst">FlipIt is built so there's nothing to collect. This page covers both apps — Windows and Android — and this website.</p>
+
+    <h2>Both apps</h2>
+    <ul>
+      <li><strong>Files never leave your device.</strong> Conversion runs in a temporary folder on your own PC or phone, which FlipIt deletes as soon as the file is done, or stopped.</li>
+      <li><strong>No network connections.</strong> FlipIt has no code that talks to the internet — no uploads, update checks, crash reports, analytics or ads. Automated tests fail if networking code is ever added.</li>
+      <li><strong>No account.</strong> There is nothing to sign up for, so FlipIt holds no name, email or payment details.</li>
+      <li><strong>Passwords aren't stored.</strong> When you lock or unlock a file, the password goes straight to the converter and is forgotten once it finishes. It isn't written to disk, logged, or passed where other programs can read it.</li>
+      <li><strong>Hidden metadata is removed by default.</strong> Converted files lose details such as camera model, GPS location, author and last-modified-by, unless you switch that off.</li>
+      <li><strong>Your originals are only read.</strong> FlipIt writes new files and never changes or deletes the files you convert.</li>
+    </ul>
+
+    <h2>The Android app</h2>
+    <ul>
+      <li><strong>It cannot reach the internet.</strong> The app asks for no internet permission at all, and its build removes that permission even if a library inside it asks for one. This is stronger than a promise: without the permission, Android itself refuses the connection.</li>
+      <li><strong>No data is collected or shared.</strong> No accounts, no identifiers, no advertising, no analytics. Nothing about you or your files is sent anywhere, because there is nowhere for it to go.</li>
+      <li><strong>It sees only the file you give it.</strong> FlipIt has no storage permission. You pick a file, or share one to it, and Android grants access to that one file. It cannot browse your phone.</li>
+      <li><strong>Results stay in the app until you say otherwise.</strong> A converted file waits in FlipIt's own private folder. It is written where you choose only when you tap Save, and handed to another app only when you tap Share.</li>
+      <li><strong>Text recognition runs on the phone.</strong> Reading a scanned page uses a language model built into the app. No page or image is uploaded for recognition.</li>
+      <li><strong>Notifications only.</strong> The one permission FlipIt asks for is to show a notification, so a long conversion can report progress while you are in another app.</li>
+    </ul>
+
+    <h2>This website</h2>
+    <ul>
+      <li>The homepage counts one visit per open browser tab session through a small Cloudflare Worker API. It stores only the aggregate total and does not use cookies, read file names, or receive conversion activity.</li>
+      <li>Android and Windows download totals come from the download counts on public GitHub Releases. No app downloads are available until a release is published.</li>
+      <li>Fonts and images are served from this site. Cloudflare and GitHub may process basic network request information to provide their services.</li>
+    </ul>
+
+    <h2>Changes</h2>
+    <p>If this ever changes, it will be announced in the <a href="changelog.html">release notes</a> before the version that changes it.</p>
+  </main>
+
+  <footer class="foot">
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>FlipIt</a>
+    <nav class="foot-links" aria-label="More about FlipIt">
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="changelog.html">Release notes</a>
+    </nav>
+    <span>Windows and phone apps in development · Offline by design.</span>
+  </footer>
+</div>
+</body>
+</html>
