@@ -2,17 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src https://flipit-site-stats.rouguemind-dev.workers.dev; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<script src="theme-init.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FlipIt privacy</title>
 <meta name="description" content="What FlipIt does with your files, passwords and data: it keeps them on your own device.">
 <link rel="icon" href="favicon.ico">
 <link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="styles.css">
-<script>
-// Before anything is painted: a stored choice has to be on the root element already, or the page
-// paints in the other theme first and the visitor sees it flash.
-(function(){try{var t=localStorage.getItem('flipit-theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
-</script>
 <script src="site.js" defer></script>
 <!--og-->
 <link rel="canonical" href="https://rogueminddev-eng.github.io/flipit-website/privacy.html">
@@ -39,15 +37,15 @@
   <main class="doc">
     <p class="label">Privacy</p>
     <h1>Your files stay on your device</h1>
-    <p class="standfirst">FlipIt is built so there's nothing to collect. This page covers both apps — Windows and Android — and this website.</p>
+    <p class="standfirst">FlipIt converts files locally. This page explains both apps — Windows and Android — and the separate visit counter on this website. Updated 27 October 2026.</p>
 
     <h2>Both apps</h2>
     <ul>
-      <li><strong>Files never leave your device.</strong> Conversion runs in a temporary folder on your own PC or phone, which FlipIt deletes as soon as the file is done, or stopped.</li>
+      <li><strong>Conversion stays on your device.</strong> FlipIt does not upload your documents, images or audio. It uses local working files. Windows saves completed results in the chosen output folder; Android keeps a completed result privately until you save, share or discard it.</li>
       <li><strong>No network connections.</strong> FlipIt has no code that talks to the internet — no uploads, update checks, crash reports, analytics or ads. Automated tests fail if networking code is ever added.</li>
       <li><strong>No account.</strong> There is nothing to sign up for, so FlipIt holds no name, email or payment details.</li>
-      <li><strong>Passwords aren't stored.</strong> When you lock or unlock a file, the password goes straight to the converter and is forgotten once it finishes. It isn't written to disk, logged, or passed where other programs can read it.</li>
-      <li><strong>Hidden metadata is removed by default.</strong> Converted files lose details such as camera model, GPS location, author and last-modified-by, unless you switch that off.</li>
+      <li><strong>Passwords are used in memory.</strong> FlipIt does not intentionally save passwords to a settings file or log. The Windows app passes them to its converter through standard input rather than command-line arguments. This does not protect against someone who already controls your device.</li>
+      <li><strong>Supported hidden metadata is removed by default.</strong> This includes photo camera and GPS tags and document author information. It does not redact visible content or guarantee that every possible hidden detail is removed. Review sensitive output before sharing it.</li>
       <li><strong>Your originals are only read.</strong> FlipIt writes new files and never changes or deletes the files you convert.</li>
     </ul>
 
@@ -55,17 +53,24 @@
     <ul>
       <li><strong>It cannot reach the internet.</strong> The app asks for no internet permission at all, and its build removes that permission even if a library inside it asks for one. This is stronger than a promise: without the permission, Android itself refuses the connection.</li>
       <li><strong>No data is collected or shared.</strong> No accounts, no identifiers, no advertising, no analytics. Nothing about you or your files is sent anywhere, because there is nowhere for it to go.</li>
-      <li><strong>It sees only the file you give it.</strong> FlipIt has no storage permission. You pick a file, or share one to it, and Android grants access to that one file. It cannot browse your phone.</li>
+      <li><strong>You choose the input.</strong> FlipIt requests no broad storage permission. Android's file picker or an explicit share grants access to the file you select; FlipIt also creates working copies inside its own private cache.</li>
       <li><strong>Results stay in the app until you say otherwise.</strong> A converted file waits in FlipIt's own private folder. It is written where you choose only when you tap Save, and handed to another app only when you tap Share.</li>
       <li><strong>Text recognition runs on the phone.</strong> Reading a scanned page uses a language model built into the app. No page or image is uploaded for recognition.</li>
+      <li><strong>Camera scanning is on Android only.</strong> Your camera app takes the photograph and grants FlipIt the result. FlipIt requests no camera permission. The raw camera file is deleted after reading it, or if you cancel. The cropped scan is kept in the private cache so you can convert it again, and is replaced when you choose another file or finish another scan. A scan older than 24 hours is removed when an idle app screen next starts; this is not a background deletion timer.</li>
+      <li><strong>Temporary files have a lifecycle.</strong> Working copies are cleaned up when they are no longer needed. A crash or interrupted session can leave cache files until a later cleanup or Android clears the cache. Deletion is ordinary file deletion, not secure erasure. Android backup is disabled for the app.</li>
       <li><strong>Notifications only.</strong> The one permission FlipIt asks for is to show a notification, so a long conversion can report progress while you are in another app.</li>
     </ul>
 
+    <h2>Other apps you choose</h2>
+    <p>On Windows, some conversions can use locally installed Word, Excel or LibreOffice. On Android, the system camera, file providers and apps you choose to share with operate under their own settings and privacy policies. Saving to a cloud folder or sharing a result can send it elsewhere through the app you selected.</p>
+
     <h2>This website</h2>
     <ul>
-      <li>The homepage counts one visit per open browser tab session through a small Cloudflare Worker API. It stores only the aggregate total and does not use cookies, read file names, or receive conversion activity.</li>
+      <li>The homepage asks a small Cloudflare Worker to count an open browser tab session. The database stores only one aggregate visit total; it receives no documents, file names, passwords or conversion activity. These are approximate visits, not unique people: blocked requests, multiple tabs and automated traffic can affect the total.</li>
+      <li>The website stores your theme choice in local storage and a counted-this-tab flag in session storage. It sets no analytics cookies and creates no advertising identifier.</li>
       <li>Android and Windows download totals come from the download counts on public GitHub Releases. No app downloads are available until a release is published.</li>
-      <li>Fonts and images are served from this site. Cloudflare and GitHub may process basic network request information to provide their services.</li>
+      <li>Fonts and images are served from this site. GitHub and Cloudflare process network request information, such as IP addresses, to host and protect their services. The counter uses Cloudflare's short-lived rate limiting to reduce abuse; it does not put IP addresses in its database or enable custom request logs.</li>
+      <li>The website and its displayed totals are public. The converter source, signing keys, Cloudflare credentials and private Worker project are not published in the website repository.</li>
     </ul>
 
     <h2>Changes</h2>

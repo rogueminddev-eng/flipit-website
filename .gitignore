@@ -1,0 +1,21 @@
+# Only approved public website files may be added here.
+*
+!.gitignore
+!.nojekyll
+!index.html
+!privacy.html
+!changelog.html
+!styles.css
+!fonts.css
+!site.js
+!theme-init.js
+!robots.txt
+!favicon.ico
+!icon.png
+!og.png
+!app-dark.png
+!app-light.png
+!bricolage-500-800.woff2
+!instrument-sans-400-600.woff2
+!plex-mono-400.woff2
+!plex-mono-500.woff2

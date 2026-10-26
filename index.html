@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src https://flipit-site-stats.rouguemind-dev.workers.dev; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<script src="theme-init.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FlipIt — convert files offline</title>
 <meta name="description" content="FlipIt converts documents, images and audio on your own Windows PC or Android phone, offline. Your files are never uploaded.">
@@ -21,11 +24,6 @@
 <meta property="og:image:alt" content="FlipIt: convert files without sending them anywhere">
 <meta name="twitter:card" content="summary_large_image">
 <!--/og-->
-<script>
-// Runs before anything is painted: a stored choice has to be on the root element already, or the
-// page paints in the other theme first and the visitor sees it flash.
-(function(){try{var t=localStorage.getItem('flipit-theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
-</script>
 <script src="site.js" defer></script>
 </head>
 <body>
@@ -84,7 +82,7 @@
       <div class="split">
         <div>
           <p class="label">What leaves your device</p>
-          <h2 class="h2" id="privacy-title">Nothing leaves your device.</h2>
+          <h2 class="h2" id="privacy-title">Conversion stays on your device.</h2>
           <p class="intro">FlipIt does the converting on your own device, so there is nothing to upload.</p>
         </div>
         <dl class="ledger">
@@ -138,6 +136,7 @@
           </ul>
         </div>
       </div>
+      <p class="intro intro-wide">Windows handles batches of the same file type. Android converts one file at a time and can scan a page with the phone's camera: adjust the four corners, then save it as PDF, Word, JPG or PNG. Image size options help reduce large pictures.</p>
     </section>
 <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="section-head">
@@ -171,7 +170,7 @@
           <div class="stat"><span class="stat-label">Android downloads</span><strong id="android-download-count">—</strong></div>
           <div class="stat"><span class="stat-label">Windows downloads</span><strong id="windows-download-count">—</strong></div>
         </div>
-        <p class="stats-note" id="stats-note">Visit counting starts when the website goes live. Download totals update when public app releases are available.</p>
+        <p class="stats-note" id="stats-note">Loading public totals. Visits are approximate tab sessions, not unique people. Download totals come from public releases.</p>
       </aside>
     </section>
   </main>

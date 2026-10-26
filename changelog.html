@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src https://flipit-site-stats.rouguemind-dev.workers.dev; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<script src="theme-init.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FlipIt updates</title>
 <meta name="description" content="FlipIt is in development. Release notes will be posted here when public apps are ready.">
@@ -29,8 +32,14 @@
   </header>
   <main class="doc">
     <p class="label">Updates</p>
-    <h1>Updates will appear here</h1>
-    <p class="standfirst">FlipIt is in development. Release notes will be published when the first public app builds are ready.</p>
+    <h1>FlipIt updates</h1>
+    <p class="standfirst">The Windows and Android apps are still in development. No public app download has been published.</p>
+    <h2>27 October 2026 · Website and privacy update</h2>
+    <ul>
+      <li>Clarified the current apps: batch conversion on Windows, and camera scanning with four-corner crop on Android.</li>
+      <li>Explained private scan retention, temporary-file cleanup, sharing and website storage in the privacy page.</li>
+      <li>Added abuse limits to the public statistics service. Visits represent approximate tab sessions rather than unique people.</li>
+    </ul>
   </main>
   <footer class="foot">
     <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>FlipIt</a>

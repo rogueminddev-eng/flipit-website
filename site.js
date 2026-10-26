@@ -24,7 +24,17 @@
     var countedThisTab = false;
     try { countedThisTab = sessionStorage.getItem(visitKey) === '1'; } catch (e) {}
 
-    var visitRequest = countedThisTab ? Promise.resolve() : fetch(api + '/visit', {
+    function request(path, options) {
+      var controller = new AbortController();
+      var timer = setTimeout(function () { controller.abort(); }, 8000);
+      options = options || {};
+      options.signal = controller.signal;
+      options.credentials = 'omit';
+      options.referrerPolicy = 'no-referrer';
+      return fetch(api + path, options).finally(function () { clearTimeout(timer); });
+    }
+
+    var visitRequest = countedThisTab ? Promise.resolve() : request('/visit', {
       method: 'POST',
       body: '',
       keepalive: true
@@ -35,7 +45,7 @@
 
     // A temporary visit-write failure should not hide the totals that can still be read.
     visitRequest.catch(function () {}).then(function () {
-      return fetch(api + '/stats', { headers: { Accept: 'application/json' } });
+      return request('/stats', { headers: { Accept: 'application/json' } });
     }).then(function (response) {
       if (!response.ok) throw new Error('Stats unavailable');
       return response.json();
@@ -43,7 +53,7 @@
       if (visitCount && Number.isSafeInteger(data.visits)) visitCount.textContent = data.visits.toLocaleString();
       if (androidCount && Number.isSafeInteger(data.androidDownloads)) androidCount.textContent = data.androidDownloads.toLocaleString();
       if (windowsCount && Number.isSafeInteger(data.windowsDownloads)) windowsCount.textContent = data.windowsDownloads.toLocaleString();
-      if (note) note.textContent = 'One visit is counted per open tab session. Download totals come from public releases.';
+      if (note) note.textContent = 'Visits are approximate tab sessions, not unique people. Download totals come from public releases.';
     }).catch(function () {
       if (note) note.textContent = 'Live totals are temporarily unavailable. Please check back soon.';
     });
