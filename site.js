@@ -33,7 +33,8 @@
       try { sessionStorage.setItem(visitKey, '1'); } catch (e) {}
     });
 
-    visitRequest.then(function () {
+    // A temporary visit-write failure should not hide the totals that can still be read.
+    visitRequest.catch(function () {}).then(function () {
       return fetch(api + '/stats', { headers: { Accept: 'application/json' } });
     }).then(function (response) {
       if (!response.ok) throw new Error('Stats unavailable');
