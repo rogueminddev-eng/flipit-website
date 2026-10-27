@@ -42,16 +42,16 @@
     <h2>Both apps</h2>
     <ul>
       <li><strong>Conversion stays on your device.</strong> FlipIt does not upload your documents, images or audio. It uses local working files. Windows saves completed results in the chosen output folder; Android keeps a completed result privately until you save, share or discard it.</li>
-      <li><strong>No built-in online services.</strong> FlipIt has no upload, update-check, crash-reporting, analytics or advertising feature. The projects include source checks for networking APIs, and the Android release build checks that network permissions are absent.</li>
+      <li><strong>No built-in online services.</strong> FlipIt has no upload, update-check, crash-reporting, analytics or advertising feature.</li>
       <li><strong>No account.</strong> There is nothing to sign up for, so FlipIt holds no name, email or payment details.</li>
-      <li><strong>Passwords are used in memory.</strong> FlipIt does not intentionally save passwords to a settings file or log. The Windows app passes them to its converter through standard input rather than command-line arguments. This does not protect against someone who already controls your device.</li>
+      <li><strong>Passwords are used only for your task.</strong> FlipIt does not intentionally save document passwords to settings or logs. Keep your device secure: someone who controls it may still access files or passwords while they are in use.</li>
       <li><strong>Supported hidden metadata is removed by default.</strong> This includes photo camera and GPS tags and document author information. It does not redact visible content or guarantee that every possible hidden detail is removed. Review sensitive output before sharing it.</li>
       <li><strong>Your originals are only read.</strong> FlipIt writes new files and never changes or deletes the files you convert.</li>
     </ul>
 
     <h2>The Android app</h2>
     <ul>
-      <li><strong>It cannot reach the internet.</strong> The app asks for no internet permission at all, and its build removes that permission even if a library inside it asks for one. This is stronger than a promise: without the permission, Android itself refuses the connection.</li>
+      <li><strong>No internet permission.</strong> FlipIt does not request Android's internet permission. Conversion and text recognition run on your phone.</li>
       <li><strong>No automatic data collection.</strong> FlipIt contains no analytics, advertising identifiers or conversion reporting. A result is handed to another app when you explicitly choose Share.</li>
       <li><strong>You choose the input.</strong> FlipIt requests no broad storage permission. Android's file picker or an explicit share grants access to the file you select; FlipIt also creates working copies inside its own private cache.</li>
       <li><strong>Results stay in the app until you say otherwise.</strong> A converted file waits in FlipIt's own private folder. It is written where you choose only when you tap Save, and handed to another app only when you tap Share.</li>
@@ -66,11 +66,10 @@
 
     <h2>This website</h2>
     <ul>
-      <li>The homepage asks a small Cloudflare Worker to count an open browser tab session. The database stores only one aggregate visit total; it receives no documents, file names, passwords or conversion activity. These are approximate visits, not unique people: blocked requests, multiple tabs and automated traffic can affect the total.</li>
+      <li>The homepage displays a total visit count. The counter stores only a combined total; it receives no documents, file names, passwords or conversion activity. These are approximate visits, not unique people: blocked requests, multiple tabs and automated traffic can affect the total.</li>
       <li>The website stores your theme choice in local storage and a counted-this-tab flag in session storage. It sets no analytics cookies and creates no advertising identifier.</li>
       <li>Android and Windows download totals come from public GitHub release asset counts. They count downloaded files, not installations or unique people. Required notices and materials for the bundled open-source libraries are public alongside the installers.</li>
-      <li>Fonts and images are served from this site. GitHub and Cloudflare process network request information, such as IP addresses, to host and protect their services. The counter uses Cloudflare's short-lived rate limiting to reduce abuse; it does not put IP addresses in its database or enable custom request logs.</li>
-      <li>The website and its displayed totals are public. The converter source, signing keys, Cloudflare credentials and private Worker project are not published in the website repository.</li>
+      <li>Fonts and images are served from this site. GitHub and Cloudflare process network request information, such as IP addresses, to host and protect their services. The visit counter does not store IP addresses or keep individual visit logs.</li>
     </ul>
 
     <h2>Changes</h2>
