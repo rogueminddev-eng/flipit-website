@@ -32,7 +32,7 @@
     <a class="brand" href="#top"><span class="mark" aria-hidden="true"></span>FlipIt</a>
     <nav class="nav" aria-label="Page sections">
       <a href="#formats">Formats</a>
-      <a href="#privacy">Privacy</a>
+      <a href="#privacy">How it works</a>
       <a href="#faq">Questions</a>
       <a class="nav-cta" href="#availability">Download</a>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" title="Switch between light and dark">
@@ -56,41 +56,37 @@
       </div>
 
       <figure>
+        <p class="label photo-example-label">Hidden details in a photo</p>
         <div class="props" id="props">
           <div class="props-head">
-            <div class="file"><span class="file-type">JPG</span><span>IMG_2041.jpg</span></div>
-            <button class="reveal" id="reveal-toggle" type="button" aria-pressed="false" aria-controls="props-tags">Reveal values</button>
+            <div class="file"><span class="file-type">JPG</span><span>Example photo.jpg</span></div>
+            <button class="reveal" id="reveal-toggle" type="button" aria-pressed="false" aria-controls="props-tags">Show example</button>
           </div>
           <dl class="tags" id="props-tags">
-            <div class="tag"><dt>Make</dt><dd><span class="val" style="--i:0">Example brand</span></dd></div>
-            <div class="tag"><dt>Model</dt><dd><span class="val" style="--i:1">Example phone</span></dd></div>
-            <div class="tag"><dt>DateTimeOriginal</dt><dd><span class="val" style="--i:2">Example date</span></dd></div>
-            <div class="tag"><dt>GPSLatitude</dt><dd><span class="val" style="--i:3">Example latitude</span></dd></div>
-            <div class="tag"><dt>GPSLongitude</dt><dd><span class="val" style="--i:4">Example longitude</span></dd></div>
-            <div class="tag"><dt>Artist</dt><dd><span class="val" style="--i:5">Example user</span></dd></div>
+            <div class="tag"><dt>Camera used</dt><dd><span class="val" style="--i:0">Example phone camera</span></dd></div>
+            <div class="tag"><dt>Date taken</dt><dd><span class="val" style="--i:1">12 October 2026</span></dd></div>
+            <div class="tag"><dt>Photo location</dt><dd><span class="val" style="--i:2">Example city</span></dd></div>
+            <div class="tag"><dt>Photographer's name</dt><dd><span class="val" style="--i:3">Example name</span></dd></div>
           </dl>
           <div class="props-foot">
-            <span>Saved as <strong>IMG_2041.png</strong></span>
-            <span class="clean"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>0 metadata tags</span>
+            <span>Saved as <strong>Example photo.png</strong></span>
+            <span class="clean"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Hidden details removed</span>
           </div>
         </div>
-        <figcaption class="caption">EXIF tags from an example photo. FlipIt writes the pixels into a new file and leaves every one of these behind.</figcaption>
+        <figcaption class="caption">Photos can store the camera used, the date and the location. FlipIt removes these hidden details from converted photos by default. This card shows made-up examples.</figcaption>
       </figure>
     </section>
 
     <section class="section" id="privacy" aria-labelledby="privacy-title">
-      <div class="split">
-        <div>
-          <p class="label">Your files, your choice</p>
-          <h2 class="h2" id="privacy-title">Your original stays untouched.</h2>
-          <p class="intro">FlipIt saves the converted file as a separate copy. Check the result, keep what you need and share it when you are ready.</p>
-        </div>
-        <dl class="ledger">
-          <div class="ledger-row"><dt>Originals modified</dt><dd>0</dd></div>
-          <div class="ledger-row"><dt>Files uploaded by FlipIt</dt><dd>0</dd></div>
-          <div class="ledger-row"><dt>Accounts required</dt><dd>0</dd></div>
-        </dl>
+      <div class="section-head">
+        <p class="label">How it works</p>
+        <h2 class="h2" id="privacy-title">Convert a file in three steps.</h2>
       </div>
+      <ol class="how-steps">
+        <li><span class="step-label">Step 1</span><h3>Choose a file</h3><p>Open a document, photo or audio file in FlipIt.</p></li>
+        <li><span class="step-label">Step 2</span><h3>Pick a format</h3><p>Choose the format you need, such as PDF, Word or PNG.</p></li>
+        <li><span class="step-label">Step 3</span><h3>Convert and save</h3><p>Get a new copy in your chosen format. Your original stays unchanged.</p></li>
+      </ol>
     </section>
 
     <section class="section" id="formats" aria-labelledby="formats-title">

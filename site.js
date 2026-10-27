@@ -112,7 +112,7 @@
     toggle.addEventListener('click', function () {
       var revealed = props.classList.toggle('is-revealed');
       toggle.setAttribute('aria-pressed', revealed ? 'true' : 'false');
-      toggle.textContent = revealed ? 'Redact values' : 'Reveal values';
+      toggle.textContent = revealed ? 'Hide example' : 'Show example';
     });
   }
 
