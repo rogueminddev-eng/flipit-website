@@ -3,6 +3,7 @@
 !.gitignore
 !.gitattributes
 !.nojekyll
+!README.md
 !index.html
 !privacy.html
 !changelog.html
