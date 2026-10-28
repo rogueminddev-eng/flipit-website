@@ -8,7 +8,9 @@ Convert documents, images and audio on your own Windows PC or Android phone. Con
 
 - Convert supported PDF, Word, Excel, CSV, text, JPG, PNG, MP3 and WAV files. See the [available conversions](https://rogueminddev-eng.github.io/flipit-website/#formats).
 - Convert batches of the same file type on Windows.
-- Scan pages on Android, adjust the four corners, and save as PDF, Word, JPG or PNG.
+- Use PDF tools on both platforms: merge, split, extract, remove or rotate pages; compress PDFs; save pages as pictures; add page numbers or watermarks.
+- Make scanned PDFs searchable and add a drawn or pictured signature. These are visual signatures, not certified digital signatures.
+- Scan pages on Android, adjust the four corners, and save as PDF, Word, JPG or PNG. Combine several scanned pages into one PDF.
 - Password-protect or unlock supported PDF, Word and Excel documents.
 
 Android converts one file at a time. English text recognition can make mistakes; check important results against the original. Conversion between formats can change document layout.
