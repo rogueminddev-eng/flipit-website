@@ -3,6 +3,7 @@
   initFeatureGroups();
   initRevealToggle();
   initCopyChecksum();
+  initBackdrop();
   initPublicStats();
 
   function initFeatureGroups() {
