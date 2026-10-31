@@ -1,9 +1,20 @@
 (function () {
   initThemeToggle();
+  initFeatureGroups();
   initRevealToggle();
   initCopyChecksum();
-  initBackdrop();
   initPublicStats();
+
+  function initFeatureGroups() {
+    var narrow = window.matchMedia('(max-width: 700px)');
+    var groups = document.querySelectorAll('.feature-group');
+    function arrange() {
+      groups.forEach(function (group) { group.open = !narrow.matches; });
+    }
+    arrange();
+    if (narrow.addEventListener) narrow.addEventListener('change', arrange);
+    else narrow.addListener(arrange);
+  }
 
   function initPublicStats() {
     var card = document.getElementById('site-stats');

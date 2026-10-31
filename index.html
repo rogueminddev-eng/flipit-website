@@ -10,13 +10,13 @@
 <meta name="description" content="FlipIt converts documents, images and audio on your own Windows PC or Android phone, offline. Your files are never uploaded.">
 <link rel="icon" href="favicon.ico">
 <link rel="stylesheet" href="fonts.css">
-<link rel="stylesheet" href="styles.css?v=20261030-1">
+<link rel="stylesheet" href="styles.css?v=20261101-1">
 <!--og-->
 <link rel="canonical" href="https://rogueminddev-eng.github.io/flipit-website/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="FlipIt">
 <meta property="og:title" content="FlipIt — convert files offline">
-<meta property="og:description" content="Convert files without sending them anywhere. Free, offline, no account.">
+<meta property="og:description" content="Your files.<br>Your device. Free, offline, no account.">
 <meta property="og:url" content="https://rogueminddev-eng.github.io/flipit-website/">
 <meta property="og:image" content="https://rogueminddev-eng.github.io/flipit-website/og.png">
 <meta property="og:image:width" content="1200">
@@ -24,7 +24,7 @@
 <meta property="og:image:alt" content="FlipIt: convert files without sending them anywhere">
 <meta name="twitter:card" content="summary_large_image">
 <!--/og-->
-<script src="site.js?v=20261030-1" defer></script>
+<script src="site.js?v=20261101-1" defer></script>
 </head>
 <body>
 <div class="wrap">
@@ -49,13 +49,33 @@
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <div>
-        <p class="label">Offline file converter · Windows and Android</p>
-        <h1 id="hero-title">Convert files without sending them anywhere.</h1>
-        <p class="lead">Convert documents, images and audio on your own PC or phone. Your files never leave your device.</p>
+        <p class="hero-platforms">Built for Windows and Android</p>
+        <h1 id="hero-title">Your files.<br>Your device.</h1>
+        <p class="lead">Convert documents, images and audio offline. No uploads. No account.</p>
         <div class="cta"><a class="btn" href="#availability">Download</a></div>
-        <p class="hero-note">Free download for Windows and Android. No account or file uploads.</p>
+        <p class="hero-note">Free to download.</p>
       </div>
 
+      <figure class="product-view">
+        <div class="product-shot">
+          <img class="capture-light" src="app-light.png" width="887" height="824" alt="FlipIt for Windows showing the Convert and PDF tools tabs and file selection" fetchpriority="high">
+          <img class="capture-dark" src="app-dark.png" width="887" height="824" alt="FlipIt for Windows showing the Convert and PDF tools tabs and file selection" fetchpriority="high">
+        </div>
+        <figcaption class="caption">The Windows conversion view. Your files stay on your device.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section" id="privacy" aria-labelledby="privacy-title">
+      <div class="section-head">
+        <h2 class="h2" id="privacy-title">Convert a file in three steps.</h2>
+      </div>
+      <ol class="how-steps">
+        <li><span class="step-label">Step 1</span><h3>Choose a file</h3><p>Open a document, photo or audio file in FlipIt.</p></li>
+        <li><span class="step-label">Step 2</span><h3>Pick a format</h3><p>Choose the format you need, such as PDF, Word or PNG.</p></li>
+        <li><span class="step-label">Step 3</span><h3>Convert and save</h3><p>Get a new copy in your chosen format. Your original stays unchanged.</p></li>
+      </ol>
+      <details class="privacy-demo">
+        <summary>See how photo details are removed</summary>
       <figure>
         <p class="label photo-example-label">Hidden details in a photo</p>
         <div class="props" id="props">
@@ -76,36 +96,23 @@
         </div>
         <figcaption class="caption">Photos can store the camera used, the date and the location. FlipIt removes these hidden details from converted photos by default. These are fictional details.</figcaption>
       </figure>
-    </section>
-
-    <section class="section" id="privacy" aria-labelledby="privacy-title">
-      <div class="section-head">
-        <p class="label">How it works</p>
-        <h2 class="h2" id="privacy-title">Convert a file in three steps.</h2>
-      </div>
-      <ol class="how-steps">
-        <li><span class="step-label">Step 1</span><h3>Choose a file</h3><p>Open a document, photo or audio file in FlipIt.</p></li>
-        <li><span class="step-label">Step 2</span><h3>Pick a format</h3><p>Choose the format you need, such as PDF, Word or PNG.</p></li>
-        <li><span class="step-label">Step 3</span><h3>Convert and save</h3><p>Get a new copy in your chosen format. Your original stays unchanged.</p></li>
-      </ol>
+      </details>
     </section>
 
     <section class="section" id="formats" aria-labelledby="formats-title">
       <div class="section-head">
-        <p class="label">Formats</p>
-        <h2 class="h2" id="formats-title">Sixteen conversions, one window</h2>
+        <p class="label">Supported formats</p>
+        <h2 class="h2" id="formats-title">Convert to the format you need</h2>
       </div>
       <div class="formats">
-        <div class="group">
-          <p class="label">Documents</p>
+        <details class="group feature-group" open><summary>Documents</summary>
           <ul class="pairs">
             <li class="pair"><span>PDF</span><span class="to">→</span><span>Word</span></li>
             <li class="pair"><span>Word</span><span class="to">→</span><span>PDF</span></li>
             <li class="pair"><span>Text</span><span class="to">→</span><span>PDF</span></li>
           </ul>
-        </div>
-        <div class="group">
-          <p class="label">Tables</p>
+        </details>
+        <details class="group feature-group" open><summary>Tables</summary>
           <ul class="pairs">
             <li class="pair"><span>PDF</span><span class="to">→</span><span>Excel</span></li>
             <li class="pair"><span>PDF</span><span class="to">→</span><span>CSV</span></li>
@@ -113,9 +120,8 @@
             <li class="pair"><span>Excel</span><span class="to">→</span><span>PDF</span></li>
             <li class="pair"><span>CSV</span><span class="to">→</span><span>Excel</span></li>
           </ul>
-        </div>
-        <div class="group">
-          <p class="label">Images</p>
+        </details>
+        <details class="group feature-group" open><summary>Images</summary>
           <ul class="pairs">
             <li class="pair"><span>JPG</span><span class="to">→</span><span>PNG</span></li>
             <li class="pair"><span>PNG</span><span class="to">→</span><span>JPG</span></li>
@@ -124,14 +130,13 @@
             <li class="pair"><span>JPG</span><span class="to">→</span><span>Word</span></li>
             <li class="pair"><span>PNG</span><span class="to">→</span><span>Word</span></li>
           </ul>
-        </div>
-        <div class="group">
-          <p class="label">Audio</p>
+        </details>
+        <details class="group feature-group" open><summary>Audio</summary>
           <ul class="pairs">
             <li class="pair"><span>MP3</span><span class="to">→</span><span>WAV</span></li>
             <li class="pair"><span>WAV</span><span class="to">→</span><span>MP3</span></li>
           </ul>
-        </div>
+        </details>
       </div>
       <p class="intro intro-wide">Windows handles batches of the same file type. Android converts one file at a time and can scan pages with the phone's camera: adjust the four corners, then save as PDF, Word, JPG or PNG. Add more scanned pages to make one PDF. Picture size options show the estimated output size before conversion.</p>
     </section>
@@ -139,49 +144,44 @@
     <section class="section" id="pdf-tools" aria-labelledby="pdf-tools-title">
       <div class="section-head">
         <p class="label">PDF tools</p>
-        <h2 class="h2" id="pdf-tools-title">Work on PDFs without uploading them</h2>
+        <h2 class="h2" id="pdf-tools-title">All your PDF tools, offline</h2>
       </div>
       <div class="formats">
-        <div class="group">
-          <p class="label">Combine and cut</p>
+        <details class="group feature-group" open><summary>Combine and cut</summary>
           <ul class="pairs">
             <li class="pair tool"><span>Merge PDFs</span></li>
             <li class="pair tool"><span>Split a PDF</span></li>
             <li class="pair tool"><span>Extract pages</span></li>
             <li class="pair tool"><span>Remove pages</span></li>
           </ul>
-        </div>
-        <div class="group">
-          <p class="label">Fix and shrink</p>
+        </details>
+        <details class="group feature-group" open><summary>Fix and shrink</summary>
           <ul class="pairs">
             <li class="pair tool"><span>Rotate pages</span></li>
             <li class="pair tool"><span>Compress a PDF</span></li>
             <li class="pair tool"><span>PDF to pictures</span></li>
             <li class="pair tool"><span>Make scanned PDFs searchable</span></li>
           </ul>
-        </div>
-        <div class="group">
-          <p class="label">Mark up</p>
+        </details>
+        <details class="group feature-group" open><summary>Mark up</summary>
           <ul class="pairs">
             <li class="pair tool"><span>Add page numbers</span></li>
             <li class="pair tool"><span>Add a watermark</span></li>
             <li class="pair tool"><span>Draw or add a signature</span></li>
           </ul>
-        </div>
-        <div class="group">
-          <p class="label">Scan</p>
+        </details>
+        <details class="group feature-group" open><summary>Scan</summary>
           <ul class="pairs">
             <li class="pair tool"><span>Several pages into one PDF (Android)</span></li>
           </ul>
-        </div>
+        </details>
       </div>
       <p class="intro intro-wide">PDF tools are available on Windows and Android. Text recognition works in English and can make mistakes. A drawn or pictured signature is a visible mark, not a certified digital signature.</p>
     </section>
 
 <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="section-head">
-        <p class="label">Questions</p>
-        <h2 class="h2" id="faq-title">Quick answers</h2>
+        <h2 class="h2" id="faq-title">Questions, answered</h2>
       </div>
       <div class="faq">
         <details>
@@ -205,18 +205,16 @@
       <p class="intro intro-wide">Choose your device. Both apps work offline, with no account or file uploads.</p>
       <div class="platforms">
         <article class="platform" aria-labelledby="android-download-title">
-          <p class="label">For your phone</p>
-          <h3 class="platform-name" id="android-download-title">FlipIt for Android</h3>
+            <h3 class="platform-name" id="android-download-title">FlipIt for Android</h3>
           <p class="platform-intro">Convert a file or scan a page with the camera. Everything is processed on your phone.</p>
-          <a class="btn" href="https://github.com/rogueminddev-eng/flipit-website/releases/download/v1.2.0/FlipIt.apk" download>Download Android APK</a>
+          <a class="btn" href="https://github.com/rogueminddev-eng/flipit-website/releases/download/v1.2.0/FlipIt.apk" download>Download for Android</a>
           <p class="btn-meta">v1.2.0 · 27.2 MB · Android 8.0 or later</p>
           <details><summary>Checksum and licence</summary><p>SHA-256</p><code class="hash" id="apk-hash">3efb03ad88e3955b4909f2cdaa8b291944b7089661737d4ff180625f7947f7b6</code><button class="copy" id="copy-apk-hash" type="button">Copy checksum</button><p><a href="THIRD_PARTY_NOTICES_ANDROID.txt">Android library notices</a></p></details>
         </article>
         <article class="platform" aria-labelledby="windows-download-title">
-          <p class="label">For your PC</p>
-          <h3 class="platform-name" id="windows-download-title">FlipIt for Windows</h3>
+            <h3 class="platform-name" id="windows-download-title">FlipIt for Windows</h3>
           <p class="platform-intro">Convert documents, images and audio, including batches of the same file type.</p>
-          <a class="btn" href="https://github.com/rogueminddev-eng/flipit-website/releases/download/v1.2.0/FlipItSetup.exe" download>Download Windows installer</a>
+          <a class="btn" href="https://github.com/rogueminddev-eng/flipit-website/releases/download/v1.2.0/FlipItSetup.exe" download>Download for Windows</a>
           <p class="btn-meta">v1.2.0 · 153.5 MB · Windows 10/11, 64-bit</p>
           <p class="btn-meta">Unsigned installer. Windows may show a SmartScreen warning.</p>
           <details><summary>Checksum and licence</summary><p>SHA-256</p><code class="hash" id="hash">348b08c862e1c101a53e53d09babe1a48659175ceebb2fea09a800732d20d640</code><button class="copy" id="copy-hash" type="button">Copy checksum</button><p><a href="THIRD_PARTY_NOTICES_WINDOWS.txt">Windows library notices</a></p></details>
@@ -226,7 +224,7 @@
       <aside class="stats-card" id="site-stats" data-stats-api="https://flipit-site-stats.rouguemind-dev.workers.dev" aria-label="FlipIt website statistics">
         <p class="stats-title">FlipIt, by the numbers</p>
         <div class="stats-values">
-          <div class="stat"><span class="stat-label">Website visits</span><strong id="visit-count">—</strong></div>
+          <div class="stat"><span class="stat-label">Site visits</span><strong id="visit-count">—</strong></div>
           <div class="stat"><span class="stat-label">Android downloads</span><strong id="android-download-count">—</strong></div>
           <div class="stat"><span class="stat-label">Windows downloads</span><strong id="windows-download-count">—</strong></div>
         </div>

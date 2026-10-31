@@ -1,3 +1,4 @@
+/* Hallmark preview: built from the existing FlipIt brand; targeted audit improvements. */
 :root{
   --display:"Bricolage Grotesque","Segoe UI Variable Display","Segoe UI",system-ui,sans-serif;
   --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
@@ -257,3 +258,48 @@ p,figure{margin:0}
 .screen-safe-folder{left:20.1%;top:79.6%;width:24.5%;height:4.5%}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .screen-safe-label,:root[data-theme="dark"] .screen-safe-label{background:#191b22;color:#e2e4ed}}
 @media (max-width:520px){.screen-safe-label{font-size:7px}}
+
+/* Preview polish preserves the existing fonts, palette and link wiring. */
+:root{--capture-paper:#f1f2f8;--capture-ink:#20212a}
+:root[data-theme="dark"]{--capture-paper:#191b22;--capture-ink:#e2e4ed}
+html,body{overflow-x:clip}
+h1,h2,h3{overflow-wrap:break-word;min-width:0}
+.label,.step-label,.file-type,.facts dt,.stat-label{font-family:var(--body);text-transform:none;letter-spacing:0}
+.label{font-size:14px}
+.hero{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(28px,4vw,56px);padding-block:48px 72px}
+.hero h1{font-size:clamp(56px,6.8vw,88px);line-height:1.02;margin-block:20px 24px;letter-spacing:-.05em}
+.hero-platforms{font-size:15px;color:var(--ink-2)}
+.lead{max-width:29rem;font-size:20px}
+.product-view{min-width:0}
+.product-shot{overflow:hidden;border:1px solid var(--rule);border-radius:12px;background:var(--surface)}
+.product-shot img{display:block;width:100%;height:auto}
+.product-shot .capture-dark{display:none}
+:root[data-theme="dark"] .capture-light{display:none}
+:root[data-theme="dark"] .capture-dark{display:block}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .capture-light{display:none}:root:not([data-theme="light"]) .capture-dark{display:block}}
+.product-view .caption{font-size:13px;max-width:none}
+.btn{min-height:48px;justify-content:center;white-space:nowrap;transition:background-color .15s ease,color .15s ease}
+.btn:hover,.btn:active{transform:none}
+.btn:focus-visible,.theme-toggle:focus-visible,.reveal:focus-visible,.copy:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.theme-toggle,.reveal,.copy{min-height:44px}
+.privacy-demo{margin-top:32px;border-top:1px solid var(--rule);padding-top:20px}
+.privacy-demo>summary{cursor:pointer;color:var(--ink-2);padding-block:10px;font-size:16px}
+.privacy-demo figure{max-width:44rem;margin-top:24px}
+.feature-group{border-top:1px solid var(--rule);min-width:0}
+.feature-group>summary{cursor:pointer;font:600 16px/1.4 var(--body);color:var(--ink);padding:18px 0;list-style-position:inside}
+.feature-group .pairs{border-top:0}
+.feature-group .pair{font-family:var(--body);font-size:16px}
+.feature-group .pair.tool{font-family:var(--body)}
+.section{padding-block:72px}
+.section-head{margin-bottom:28px}
+.h2{margin-top:0}
+.how-steps li{padding-top:16px}
+.stats-card{max-width:42rem;box-shadow:none}
+.stat-label{font-size:13px;line-height:1.4;color:var(--ink-2)}
+.stats-note{font-size:13px}
+.stats-card:hover{transform:none}
+.doc{max-width:46rem}
+.screen-safe-label{background:var(--capture-paper);color:var(--capture-ink)}
+@media(max-width:900px){.hero{grid-template-columns:minmax(0,1fr);gap:32px}.hero h1{font-size:clamp(56px,10vw,80px)}.product-view{max-width:42rem}}
+@media(max-width:700px){.section{padding-block:48px}.hero{padding-block:28px 48px}.hero h1{margin-block:14px 20px}.hero-note{margin-top:16px}.cta{margin-top:24px}.how-steps{gap:16px}.how-steps h3{margin-top:8px;font-size:20px}.how-steps p{margin-top:6px;font-size:16px}.formats{gap:0}.feature-group .pairs{padding-bottom:12px}.feature-group[open]>summary{color:var(--accent)}.intro-wide{font-size:16px}.platform .btn{align-self:stretch;padding-inline:12px}.platforms{gap:20px}.stats-values{grid-template-columns:minmax(0,1fr);gap:0}.stat{grid-template-columns:minmax(0,1fr) auto;align-items:center;text-align:left;padding:12px 0}.stat+.stat{border-left:0;border-top:1px solid var(--rule)}.stat-label{font-size:14px}.stat strong{font-size:26px}.stats-card{padding:18px}.product-view .caption{font-size:13px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.btn:hover,.stats-card:hover{transform:none}}
